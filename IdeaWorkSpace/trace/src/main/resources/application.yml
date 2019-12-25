@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+spring:
+  #数据源
+  datasource:
+    url: jdbc:mysql://10.1.18.185:3306/jfcheng?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone = GMT
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  resources:
+    static-locations: classpath:/static
+
+  thymeleaf:
+    prefix: classpath:/templates/
+#mybatis配置
+mybatis:
+  typeAliasesPackage: com.fh.trace.dao.entity
+  mapperLocations: classpath:mapper/*.xml
+  #configLocation: classpath:/mybatis-config.xml
